@@ -1,6 +1,5 @@
 package com.stunnningcoder.daggerinitials
 
-import com.stunnningcoder.daggerinitials.di.AppComponent
 import com.stunnningcoder.daggerinitials.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
