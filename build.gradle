@@ -7,7 +7,7 @@ buildscript {
         ]
 
         library = [
-
+              retrofit = '2.5.0'
         ]
 
         architectureComponent = [

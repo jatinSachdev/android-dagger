@@ -9,11 +9,15 @@ import com.bumptech.glide.request.RequestOptions
 import com.stunnningcoder.daggerinitials.R
 import dagger.Module
 import dagger.Provides
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 /**
  * Created by Jatin on 7/11/19.
  */
+
+const val baseUrl = "https://jsonplaceholder.typicode.com/"
 @Module
 class AppModule {
 
@@ -31,6 +35,13 @@ class AppModule {
         @JvmStatic
         fun provideGlideManager(application: Application, requestOptions: RequestOptions): RequestManager {
             return Glide.with(application).setDefaultRequestOptions(requestOptions)
+        }
+
+        @Singleton
+        @Provides
+        @JvmStatic
+        fun provideRetrofitInstance() : Retrofit{
+            return Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create()).build()
         }
 
         @Singleton
