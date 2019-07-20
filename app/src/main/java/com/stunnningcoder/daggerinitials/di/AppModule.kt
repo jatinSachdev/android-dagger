@@ -10,6 +10,7 @@ import com.stunnningcoder.daggerinitials.R
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
@@ -41,7 +42,7 @@ class AppModule {
         @Provides
         @JvmStatic
         fun provideRetrofitInstance() : Retrofit{
-            return Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create()).build()
+            return Retrofit.Builder().baseUrl(baseUrl).addCallAdapterFactory(RxJava2CallAdapterFactory.create()).addConverterFactory(GsonConverterFactory.create()).build()
         }
 
         @Singleton

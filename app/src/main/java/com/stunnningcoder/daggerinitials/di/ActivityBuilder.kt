@@ -1,8 +1,9 @@
 package com.stunnningcoder.daggerinitials.di
 
+import com.stunnningcoder.daggerinitials.MainActivity
 import com.stunnningcoder.daggerinitials.di.login.LoginViewModelsModule
 import com.stunnningcoder.daggerinitials.login.LoginActivity
-import com.stunnningcoder.daggerinitials.login.LoginModule
+import com.stunnningcoder.daggerinitials.di.login.LoginModule
 import dagger.Module
 import dagger.Provides
 import dagger.android.ContributesAndroidInjector
@@ -16,6 +17,9 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector(modules = [LoginViewModelsModule::class, LoginModule::class])
     abstract fun getLoginActivity(): LoginActivity
+
+    @ContributesAndroidInjector()
+    abstract fun getMainActivity() : MainActivity
 
     @Module
     companion object{

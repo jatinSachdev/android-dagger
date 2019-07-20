@@ -1,5 +1,6 @@
-package com.stunnningcoder.daggerinitials.login
+package com.stunnningcoder.daggerinitials.di.login
 
+import com.stunnningcoder.daggerinitials.login.LoginApi
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -15,7 +16,7 @@ class LoginModule {
 
         @Provides
         @JvmStatic
-        fun provideLoginApi(retrofit: Retrofit) : LoginApi{
+        fun provideLoginApi(retrofit: Retrofit) : LoginApi {
             return retrofit.create(LoginApi::class.java)
         }
     }

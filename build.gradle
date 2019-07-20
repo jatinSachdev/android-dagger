@@ -7,7 +7,8 @@ buildscript {
         ]
 
         library = [
-              retrofit = '2.5.0'
+              retrofit = '2.5.0',
+              rxjava = '2.2.0'
         ]
 
         architectureComponent = [

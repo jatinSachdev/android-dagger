@@ -22,10 +22,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    kapt{
-        javacOptions{
+    kapt {
+        javacOptions {
             option("Xmaxerrs", 5000)
         }
+    }
+    dataBinding {
+        enabled = true
     }
 
 }
@@ -49,6 +52,9 @@ dependencies {
     kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit"
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxjava"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version"
 
 
 }
