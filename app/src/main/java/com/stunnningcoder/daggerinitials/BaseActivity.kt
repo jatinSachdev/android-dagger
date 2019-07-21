@@ -1,10 +1,12 @@
 package com.stunnningcoder.daggerinitials
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
+import com.stunnningcoder.daggerinitials.login.LoginActivity
 import com.stunnningcoder.daggerinitials.network.NetworkResource
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
@@ -34,8 +36,17 @@ abstract class  BaseActivity : DaggerAppCompatActivity() {
                     Toast.makeText(this, (it.data?.username) + "SUCCESS", Toast.LENGTH_LONG).show()
 
                 }
+                is NetworkResource.Logout -> {
+                    logout()
+                }
             }
 
         })
+    }
+
+    private fun logout() {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
