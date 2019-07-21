@@ -1,15 +1,22 @@
-package com.stunnningcoder.daggerinitials
+package com.stunnningcoder.daggerinitials.main
 
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import com.stunnningcoder.daggerinitials.BaseActivity
+import com.stunnningcoder.daggerinitials.R
 
 class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        inflateProfile()
+    }
+
+    private fun inflateProfile() {
+        supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, ProfileFragment()).commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -5,14 +5,13 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.RequestManager
 import com.stunnningcoder.daggerinitials.BR
-import com.stunnningcoder.daggerinitials.MainActivity
+import com.stunnningcoder.daggerinitials.main.MainActivity
 import com.stunnningcoder.daggerinitials.R
 import com.stunnningcoder.daggerinitials.ViewModelProvidersFactory
 import com.stunnningcoder.daggerinitials.databinding.ActivityLoginBinding
@@ -54,8 +53,6 @@ class LoginActivity : DaggerAppCompatActivity() {
                 is NetworkResource.Success -> {
                     activityLoginBinding.progress.visibility = View.GONE
                     invadeDagger()
-                    Toast.makeText(this, (it.data?.username) + "SUCCESS", Toast.LENGTH_LONG).show()
-
                 }
             }
         })

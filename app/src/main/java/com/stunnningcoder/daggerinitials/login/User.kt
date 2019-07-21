@@ -14,8 +14,6 @@ class User {
 
     @SerializedName("username")
     @Expose
-
-
     var username: String = ""
 
     @SerializedName("website")

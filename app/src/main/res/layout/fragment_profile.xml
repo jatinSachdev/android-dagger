@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+  <data>
+    <variable name="profileViewModel" type="com.stunnningcoder.daggerinitials.main.ProfileFragmentViewModel"/>
+  </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:padding="64dp"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   tools:context=".main.ProfileFragment">
+
+  <TextView
+      android:id="@+id/userName"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_width="wrap_content"
+      android:padding="8dp"
+      android:layout_height="wrap_content"
+      android:text="@{profileViewModel.mutableLiveData.username}"/>
+
+  <TextView
+      android:id="@+id/website"
+      android:padding="8dp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/userName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@{profileViewModel.mutableLiveData.website}"/>
+
+  <TextView
+      android:id="@+id/email"
+      android:padding="8dp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/website"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@{profileViewModel.mutableLiveData.email}"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

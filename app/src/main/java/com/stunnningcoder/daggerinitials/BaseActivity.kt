@@ -32,8 +32,6 @@ abstract class  BaseActivity : DaggerAppCompatActivity() {
                     Toast.makeText(this, "FAILURE", Toast.LENGTH_LONG).show()
                 }
                 is NetworkResource.Success -> {
-                    
-                    Toast.makeText(this, (it.data?.username) + "SUCCESS", Toast.LENGTH_LONG).show()
 
                 }
                 is NetworkResource.Logout -> {
