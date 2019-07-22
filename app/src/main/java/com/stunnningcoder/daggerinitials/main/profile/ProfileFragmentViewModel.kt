@@ -1,4 +1,4 @@
-package com.stunnningcoder.daggerinitials.main
+package com.stunnningcoder.daggerinitials.main.profile
 
 import android.util.Log
 import androidx.lifecycle.LiveData

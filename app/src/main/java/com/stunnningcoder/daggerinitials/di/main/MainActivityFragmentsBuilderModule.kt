@@ -1,6 +1,7 @@
 package com.stunnningcoder.daggerinitials.di.main
 
-import com.stunnningcoder.daggerinitials.main.ProfileFragment
+import com.stunnningcoder.daggerinitials.main.post.PostsFragment
+import com.stunnningcoder.daggerinitials.main.profile.ProfileFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -13,5 +14,8 @@ abstract class MainActivityFragmentsBuilderModule{
 
     @ContributesAndroidInjector
     abstract fun contributesProfileFragment() : ProfileFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributesPostsFragment() : PostsFragment
 
 }

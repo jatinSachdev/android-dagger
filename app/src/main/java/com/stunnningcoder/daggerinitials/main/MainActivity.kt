@@ -6,6 +6,8 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import com.stunnningcoder.daggerinitials.BaseActivity
 import com.stunnningcoder.daggerinitials.R
+import com.stunnningcoder.daggerinitials.main.post.PostsFragment
+import com.stunnningcoder.daggerinitials.main.profile.ProfileFragment
 
 class MainActivity : BaseActivity() {
 
@@ -16,7 +18,9 @@ class MainActivity : BaseActivity() {
     }
 
     private fun inflateProfile() {
-        supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, ProfileFragment()).commit()
+        supportFragmentManager.beginTransaction().add(R.id.fragmentContainer,
+            PostsFragment()
+        ).commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
