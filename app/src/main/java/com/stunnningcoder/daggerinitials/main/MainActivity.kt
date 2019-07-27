@@ -16,6 +16,7 @@ import com.stunnningcoder.daggerinitials.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
+
     lateinit var controller: NavController
     lateinit var mainBinding: ActivityMainBinding
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

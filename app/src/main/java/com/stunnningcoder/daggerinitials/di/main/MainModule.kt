@@ -15,10 +15,13 @@ class MainModule {
 
     @Module
     companion object{
+
+        @MainScope
         @Provides
         @JvmStatic
         fun provideMainApi(retrofit: Retrofit): MainApi = retrofit.create(MainApi::class.java)
 
+        @MainScope
         @Provides
         @JvmStatic
         fun providePostAdapter() : PostRecyclerViewAdapter{

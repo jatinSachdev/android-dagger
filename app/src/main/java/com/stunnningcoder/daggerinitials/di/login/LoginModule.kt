@@ -11,9 +11,11 @@ import retrofit2.Retrofit
 @Module
 class LoginModule {
 
+
     @Module
     companion object{
 
+        @LoginScope
         @Provides
         @JvmStatic
         fun provideLoginApi(retrofit: Retrofit) : LoginApi {
