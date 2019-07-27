@@ -57,7 +57,6 @@ class PostsFragment : DaggerFragment() {
                         mPostRecyclerViewAdapter.posts = list
                         initPostsRecycler()
                     }
-
                 }
                 is NetworkResource.Error-> {
 

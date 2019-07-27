@@ -6,4 +6,6 @@
   <string name="login">Login</string>
   <string name="invade">Invade</string>
   <string name="logout">logout</string>
+  <string name="nav_profile">Profile</string>
+  <string name="nav_posts">Posts</string>
 </resources>
